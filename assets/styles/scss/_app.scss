@@ -2,7 +2,7 @@
 @use 'mixins';
 
 *{
-    margin: 0;
+    margin: 0 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -393,7 +393,7 @@ input[type=range]::-ms-fill-upper {
     }
   }
   }
-
+ 
 .length-setting,
 .checkboxes,
 .strength-meter,
@@ -402,13 +402,15 @@ input[type=range]::-ms-fill-upper {
   margin-left: 0;
   padding-left: 0;
   box-sizing: border-box;
-  align-items: flex-start;
+
+  
+  align-items: left;
   justify-content: flex-start;
 } 
-
+ 
 .toast{
   display: none; 
-  position:fixed;
+  position: relative;
   width: calc(fit-content + 2rem); 
   
   bottom: 60%; 

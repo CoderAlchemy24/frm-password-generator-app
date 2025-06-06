@@ -1,5 +1,5 @@
 @mixin text-preset-1{
-    font-family: 'JetBrains Mono Bold';
+    font-family: 'JetBrains Mono Bold' ,'sans-serif';
     font-weight: 700;
     font-size: 32px;
     line-height: 42px;
@@ -7,7 +7,7 @@
 }
 
 @mixin text-preset-2{
-    font-family: 'JetBrains Mono Bold';
+    font-family: 'JetBrains Mono Bold', 'sans-serif';
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -15,7 +15,7 @@
 }
 
 @mixin text-preset-3{
-    font-family: 'JetBrains Mono Bold';
+    font-family: 'JetBrains Mono Bold', 'sans-serif';
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -23,7 +23,7 @@
 }
 
 @mixin text-preset-4{
-    font-family: 'JetBrains Mono Bold';
+    font-family: 'JetBrains Mono Bold', 'sans-serif';
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
