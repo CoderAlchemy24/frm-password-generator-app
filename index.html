@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Password generator app</title>
+
+  <link rel="stylesheet" href="./assets/styles/css/main.css">
+  
+  <script src="./js/script.js" defer type="module"></script>
+</head>
+<body>
+  <div class="content">
+      <div class="title">
+        <h1>Password Generator</h1>  
+      </div>
+      <main>
+        <section>
+          
+          <div class="password-container">
+            
+            <p id="password" class="password">P4$5W0rD!</p>
+            <span class="copied">Copied!</span>
+            <svg id="copyIcon" class="copy-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="#A4FFAF"/></svg>
+            
+          </div>
+             
+    
+        </section>
+        <section>
+            <form id="passwordForm" class="form" >
+              <div class="length-setting">
+                <div class="length-wrapper">
+                  <label for="length">Character Length</label>
+                  <span id="lengthValue">12</span>
+                </div>
+                <input type="range" id="length" name="length" min="4" max="16" value="12" oninput="document.getElementById('lengthValue').textContent = this.value">
+              <div>
+    
+    
+              <div class="checkboxes">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="checkbox-1" >
+                  <span class="checkmark">
+                    <svg width="14" height="12" class="check-icon" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="#18171F" stroke-width="2" fill="none" d="M1 5.607 4.393 9l8-8"/>
+                    </svg>
+                  </span>
+                  Include Uppercase Letters
+                </label>
+              
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="checkbox-2" >
+                  <span class="checkmark">
+                    <svg width="14" height="12" class="check-icon" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="#18171F" stroke-width="2" fill="none" d="M1 5.607 4.393 9l8-8"/>
+                    </svg>
+                  </span>
+                  Include Lowercase Letters
+                </label>
+              
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="checkbox-3">
+                  <span class="checkmark">
+                    <svg width="14" height="12" class="check-icon" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="#18171F" stroke-width="2" fill="none" d="M1 5.607 4.393 9l8-8"/>
+                    </svg>
+                  </span>
+                  Include Numbers
+                </label>
+              
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="checkbox-4">
+                  <span class="checkmark">
+                    <svg width="14" height="12" class="check-icon" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke="#18171F" stroke-width="2" fill="none" d="M1 5.607 4.393 9l8-8"/>
+                    </svg>
+                  </span>
+                  Include Symbols
+                </label>
+              </div>
+    
+            
+              <div class="strength-meter">
+                <div class="strength-indicator" id="strength-indicator">
+                  <h3 class="strength-text">Strength</h3>
+                  <h4 class="strength-level">Weak</h4>
+                  <div class="strength-bar">
+                    <div class="rectangle empty" ></div>
+                    <div class="rectangle empty" ></div>
+                    <div class="rectangle empty" ></div>
+                    <div class="rectangle empty" ></div>
+                  </div>
+                </div>
+             </div>
+             <button type="submit" class="submit-button">
+                Generate
+                <svg class="arrow" width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+                   <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
+                </svg>
+             </button>
+            </form>
+       
+            
+         </section>
+      </main>
+      <div class ='toast'></div>
+     
+  </div>
+  
+</body>
+</html>

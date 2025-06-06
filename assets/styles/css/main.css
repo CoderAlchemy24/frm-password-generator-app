@@ -1,0 +1,565 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+  background-color: #08070B;
+  color: #FFFFFF;
+  margin: 32px auto;
+}
+
+.content {
+  width: 33.75rem;
+  height: 43.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 0 auto;
+}
+
+.title {
+  width: 29.75rem;
+}
+
+.title h1 {
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0px;
+  background-color: #08070B;
+  color: #817D92;
+  text-align: center;
+}
+
+main {
+  width: 29.75rem;
+  height: auto;
+  background-color: #08070B;
+  color: #54535B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 24px;
+}
+
+/* Section 1 styling */
+section {
+  width: 29.75rem;
+  height: auto;
+  padding: 16px 32px;
+  background-color: #24232C;
+  margin: 0;
+}
+
+.password-container {
+  position: relative;
+  left: 0;
+  width: 29.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.password-container p {
+  display: inline;
+  padding: 10px 10px 10px 6px;
+  left: -4px;
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  background-color: #24232C;
+  border: none;
+  text-align: left;
+}
+.password-container p:hover {
+  background-color: #000000;
+  color: #A4FFAF;
+}
+.password-container .copied {
+  display: none;
+  color: #A4FFAF;
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  right: 120px;
+}
+.password-container .copy-icon {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 24px;
+  cursor: pointer;
+  fill: #817D92;
+  transition: fill 0.2s;
+}
+
+.copy-icon:hover {
+  fill: #A4FFAF;
+}
+
+/*section 2 styling */
+.length-setting {
+  width: 29.75rem;
+  height: auto;
+  padding: 16px;
+  background-color: #24232C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.length-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.length-wrapper label {
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #817D92;
+  text-align: left;
+}
+
+.length-wrapper span {
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #A4FFAF;
+}
+
+/* input range styling */
+input[type=range] {
+  -webkit-appearance: none; /* Removes default styling */
+  width: 100%;
+  height: 6px;
+  background-color: #24232C;
+  outline: none;
+  margin: 16px 0;
+}
+
+/* input range styling */
+/* Chrome, Safari, Opera */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #A4FFAF;
+  margin-top: -7px; /* align thumb with track */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #A4FFAF;
+}
+
+/* input range styling */
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #A4FFAF;
+}
+
+input[type=range]::-moz-range-track {
+  height: 6px;
+  background: #A4FFAF;
+  border-radius: 5px;
+}
+
+/* input range styling */
+/* IE and Edge */
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type=range]::-ms-track {
+  height: 6px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* checkboxes styling */
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.custom-checkbox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 0px;
+  color: #817D92;
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  width: 17px;
+  height: 19px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 4px 8px 4px 0;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.check-icon {
+  width: 15px;
+  height: 15px;
+  stroke: white;
+  visibility: hidden;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #A4FFAF;
+  border-color: #A4FFAF;
+}
+
+.custom-checkbox input:checked + .checkmark .check-icon {
+  visibility: visible;
+}
+
+/* Strength Meter styling */
+.strength-level {
+  width: 29.75rem;
+}
+
+.strength-indicator {
+  width: 25rem;
+  display: grid;
+  grid-template-columns: 5fr 4fr 1fr;
+  grid-template-rows: 3fr;
+  padding: 16px;
+  margin: 16px auto;
+  background-color: #18171F;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.strength-text {
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #817D92;
+  text-transform: uppercase;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.strength-level {
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  font-size: min(1.2rem, 3vw);
+  color: #E6E5EA;
+  text-transform: uppercase;
+  text-align: right;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: end;
+  gap: 8px;
+}
+
+.strength-bar {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
+}
+
+.rectangle {
+  width: 8px;
+  height: 22px;
+  padding-right: 2px;
+}
+
+.empty {
+  border: 2px solid #E6E5EA;
+  background-color: #18171F;
+}
+
+.submit-button {
+  width: 29.75rem;
+  height: 3rem;
+  background-color: #A4FFAF;
+  color: #24232C;
+  border: none;
+  margin-top: 0;
+  padding: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "JetBrains Mono Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  transition: background-color 0.2s;
+}
+.submit-button:hover {
+  background-color: #24232C;
+  color: #A4FFAF;
+  border: 1px solid #A4FFAF;
+}
+.submit-button:hover .arrow {
+  fill: #817D92;
+}
+.submit-button:hover .arrow:hover {
+  fill: #A4FFAF;
+}
+
+.length-setting,
+.checkboxes,
+.strength-meter,
+.submit-button {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.toast {
+  display: none;
+  position: fixed;
+  width: calc(fit-content + 2rem);
+  bottom: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F8CD65;
+  color: #14131B;
+  padding: 12px 24px;
+  border-radius: 6px;
+  z-index: 5;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 38rem) {
+  .content {
+    width: 21rem;
+    padding: 8px;
+  }
+  .title,
+  main,
+  section,
+  .password-container {
+    width: 19rem;
+    margin: 0 auto;
+    padding: 8px 0;
+  }
+  .length-setting,
+  .strength-indicator,
+  .strength-level {
+    width: 17.5rem;
+    margin: auto;
+    padding: 0;
+  }
+  .title h1 {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .password-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+  }
+  .password-container p {
+    width: 94%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  .password-container .copied {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 20%;
+  }
+  .password-container .copy-icon {
+    position: absolute;
+    right: 4%;
+  }
+  #lengthValue {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .copy-icon {
+    position: absolute;
+    right: 8px;
+  }
+  .length-wrapper label {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .checkboxes {
+    width: 17.5rem;
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .custom-checkbox {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .custom-checkbox input {
+    width: 20px;
+    height: 20px;
+  }
+  .strength-indicator {
+    width: 17.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    margin: 16px auto 16px 0;
+    padding: 8px;
+  }
+  .strength-text,
+  .strength-level {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding: 8px;
+  }
+  .rectangle {
+    width: 6px;
+    height: 16px;
+  }
+  .submit-button {
+    font-family: "JetBrains Mono Bold";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    width: 17.5rem;
+    margin: 8px auto;
+    padding: 8px;
+  }
+}
+@font-face {
+  font-family: "JetBrains Mono Bold";
+  src: url("../../fonts/static/JetBrainsMono-Bold.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=main.css.map */

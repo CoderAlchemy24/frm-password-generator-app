@@ -1,0 +1,545 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    width: 100%;
+    
+    font-size: 16px;;
+
+    background-color: variables.$color-grey-950;
+    color: variables.$color-white;
+    margin: variables.$spacing-400 auto;
+     
+}
+
+.content{
+    width: 33.75rem;
+    height: 43.5rem;
+    @include mixins.flex-container(column, center, center);
+     gap: variables.$spacing-400;
+      margin:0 auto;
+  }
+
+.title{
+  width: 29.75rem;
+}
+
+.title h1{
+    
+    @include mixins.text-preset-1;
+    background-color: variables.$color-grey-950;
+    color: variables.$color-grey-600;
+    text-align: center;
+   
+  
+}
+
+main{
+  width: 29.75rem;
+  height: auto;
+
+  background-color: variables.$color-grey-950;
+  color: variables.$color-grey-700;
+
+  @include mixins.flex-container(column, center, left);
+  gap: variables.$spacing-300;
+}
+
+/* Section 1 styling */
+
+section{
+    width: 29.75rem;
+    height: auto;
+    padding: variables.$spacing-200 variables.$spacing-400;
+    background-color: variables.$color-grey-800;
+    margin: 0;
+}
+
+
+.password-container{
+        position: relative;
+        left: 0;
+        width: 29.75rem;
+        @include mixins.flex-container(row, space-between, center);
+
+        p {
+            display: inline;
+            padding: 10px 10px 10px 6px; 
+            left:-4px;
+             @include mixins.text-preset-2;
+            color: variables.$color-white;
+            background-color: variables.$color-grey-800;
+            border: none;
+
+            
+
+            text-align: left;
+          
+             &:hover {
+               
+                background-color: variables.$color-black;
+                color: variables.$color-green-200;
+            }
+        }
+
+        .copied{
+
+          display: none;
+          color: variables.$color-green-200;
+          @include mixins.text-preset-3;
+         
+          text-transform: uppercase;
+          text-align: right;
+
+          position: absolute;
+          right: 120px;
+
+        }
+
+        .copy-icon {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 21px;
+            height: 24px;
+            cursor: pointer;
+            fill: variables.$color-grey-600;
+            transition: fill 0.2s;
+  }
+}
+  .copy-icon:hover {
+    fill: variables.$color-green-200;
+  }
+
+ /*section 2 styling */
+
+ 
+  .length-setting{
+    width: 29.75rem;
+    height: auto;
+    padding: variables.$spacing-200 ;
+    
+    background-color: variables.$color-grey-800;
+    @include mixins.flex-container(column, center, center);
+    gap: variables.$spacing-200;
+    
+  }
+  .length-wrapper{
+    width: 100%;
+    height: auto;
+    @include mixins.flex-container(row, space-between, center);
+  
+  }
+ 
+
+  .length-wrapper label{
+    @include mixins.text-preset-3;
+    color: variables.$color-grey-600;
+    text-align: left;
+  }
+
+   .length-wrapper span {
+    @include mixins.text-preset-1;
+    text-align: right;
+    color: variables.$color-green-200;
+  }
+
+  /* input range styling */
+
+  input[type=range] {
+  -webkit-appearance: none; /* Removes default styling */
+  width: 100%;
+  height: 6px;
+  background-color: variables.$color-grey-800;
+  outline: none;
+  margin: variables.$spacing-200 0;
+}
+/* input range styling */
+/* Chrome, Safari, Opera */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  color: variables.$color-black;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid variables.$color-green-200;
+  margin-top: -7px; /* align thumb with track */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  
+  background: variables.$color-green-200;
+ 
+}
+/* input range styling */
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  color: variables.$color-black;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid variables.$color-green-200;
+}
+
+input[type=range]::-moz-range-track {
+  height: 6px;
+  background: variables.$color-green-200;
+  border-radius: 5px;
+}
+/* input range styling */
+/* IE and Edge */
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type=range]::-ms-track {
+  height: 6px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+
+/* checkboxes styling */
+
+.checkboxes{
+    @include mixins.flex-container(column, flex-start, flex-start);
+    @include mixins.text-preset-2;
+  
+    margin:0;
+    padding: 0;
+    width: 100%;
+
+  }
+
+.custom-checkbox {
+  width: 100%;
+  @include mixins.flex-container(row, left, flex-start);
+  cursor: pointer;
+ 
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 0px; 
+  color: variables.$color-grey-600;
+  
+  @include mixins.text-preset-3;
+  margin: 0 ;
+  
+}
+
+
+
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+;
+}
+
+.checkmark {
+  width: 17px;
+  height: 19px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 4px 8px 4px 0; 
+  
+  position: relative;
+  
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.check-icon {
+  width: 15px;
+  height: 15px;
+  stroke: white;
+  visibility: hidden;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: variables.$color-green-200;
+  border-color: variables.$color-green-200;
+
+}
+
+.custom-checkbox input:checked + .checkmark .check-icon {
+  visibility: visible;
+}
+
+
+/* Strength Meter styling */
+.strength-level{
+   width: 29.75rem;
+  
+    
+}
+
+
+.strength-indicator{
+   width: 25rem;
+
+    display: grid;
+    grid-template-columns: 5fr 4fr 1fr;
+    grid-template-rows: 3fr;
+    
+    padding: variables.$spacing-200;
+    margin: variables.$spacing-200 auto;
+   
+     background-color: variables.$color-grey-850;
+    @include mixins.flex-container(row, center, center);
+
+    gap: variables.$spacing-300;
+  }
+
+  .strength-text{
+
+    @include mixins.text-preset-3; 
+    color: variables.$color-grey-600;
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;  
+     ;
+  }
+
+  .strength-level{
+    @include mixins.text-preset-2;
+    font-size: min(1.2rem, 3vw);
+    color: variables.$color-grey-200;
+    text-transform: uppercase;
+    text-align: right;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;  
+    justify-self: end;
+    gap: variables.$spacing-100;
+    
+  }
+// Strength bar styling
+  .strength-bar{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    
+    @include mixins.flex-container(row, flex-end, center);
+    gap:2px;
+  }
+
+  .rectangle{
+    width: 8px;
+    height: 22px;
+    padding-right: 2px
+  }
+
+ .empty{
+  border: 2px solid variables.$color-grey-200;
+  background-color: variables.$color-grey-850;
+ }
+
+
+// Submit button styling
+  .submit-button{
+    width: 29.75rem;
+    height: 3rem;
+    background-color: variables.$color-green-200;
+    color: variables.$color-grey-800;
+    border: none;
+    margin-top: 0;
+    padding: variables.$spacing-100;
+
+    text-transform: uppercase;
+   
+    cursor: pointer;
+    @include mixins.text-preset-2;
+    transition: background-color 0.2s;
+
+    &:hover{
+        background-color: variables.$color-grey-800;
+        color: variables.$color-green-200;
+        border: 1px solid variables.$color-green-200;
+    
+    
+    .arrow{
+      fill: variables.$color-grey-600;
+    
+    }  
+    .arrow:hover{
+      fill: variables.$color-green-200;
+    }
+  }
+  }
+
+.length-setting,
+.checkboxes,
+.strength-meter,
+.submit-button {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+} 
+
+.toast{
+  display: none; 
+  position:fixed;
+  width: calc(fit-content + 2rem); 
+  
+  bottom: 60%; 
+  left:50%; 
+  transform:translateX(-50%); 
+  background-color: variables.$color-yellow-300; 
+  color: variables.$color-grey-900; 
+  padding:12px 24px; 
+  border-radius:6px; 
+  z-index:5; 
+  font-size:1rem; 
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+ }
+
+
+
+
+  @media screen and (max-width: 38rem) {
+
+    
+    .content{
+      width: 21rem;
+      padding: variables.$spacing-100;
+    }
+    .title,
+    main,
+    section, 
+    .password-container
+   {
+      width:19rem; 
+      margin: 0 auto;
+      padding: variables.$spacing-100 0;
+    }
+
+     .length-setting,
+     .strength-indicator,
+    .strength-level
+  
+   {
+      width: 17.5rem;
+      margin: auto;
+      padding: 0;
+    }
+
+    .title h1{
+
+    @include mixins.text-preset-4;
+
+  }
+
+  .password-container{
+   
+    @include mixins.flex-container(row, flex-start, center);
+    gap: variables.$spacing-400;
+  
+   p {
+     
+     
+      width: 94%;
+      text-align: left;
+      margin: 0 auto;
+    }
+
+    .copied{
+      @include mixins.text-preset-4;
+      font-size: 0.8rem;
+      position: absolute;
+      right: 20%;
+    }
+
+    .copy-icon
+     { position: absolute;
+      right: 4%;
+     }
+  }
+  #lengthValue{
+    @include mixins.text-preset-4;
+    
+  }
+  .copy-icon {
+            position: absolute;
+            right: 8px;}
+    .length-wrapper label{
+    @include mixins.text-preset-4;
+  }
+
+  .checkboxes{
+    width: 17.5rem;
+    @include mixins.text-preset-4;
+ }
+
+ .custom-checkbox {
+     
+    @include mixins.text-preset-4;
+    
+  }
+
+  .custom-checkbox input {
+    width: 20px;
+    height: 20px;
+  }
+
+ 
+
+  .strength-indicator{
+    width: 17.5rem;
+    @include mixins.flex-container(row, space-between, center);
+    gap: variables.$spacing-200;
+    @include mixins.text-preset-4;
+    margin: variables.$spacing-200 auto variables.$spacing-200 0;
+    padding: variables.$spacing-100;
+  
+  }
+
+  .strength-text,
+  .strength-level{
+    @include mixins.text-preset-4;
+    padding: variables.$spacing-100;
+  }
+
+  .rectangle{
+    width: 6px;
+    height: 16px;
+    
+  }
+ 
+  .submit-button{
+    
+    @include mixins.text-preset-4;
+    width: 17.5rem;
+    margin: variables.$spacing-100 auto;
+     padding: variables.$spacing-100;
+  }
+}

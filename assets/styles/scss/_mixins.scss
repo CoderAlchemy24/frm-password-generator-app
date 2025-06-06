@@ -1,0 +1,39 @@
+@mixin text-preset-1{
+    font-family: 'JetBrains Mono Bold';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0px;
+}
+
+@mixin text-preset-2{
+    font-family: 'JetBrains Mono Bold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+@mixin text-preset-3{
+    font-family: 'JetBrains Mono Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+@mixin text-preset-4{
+    font-family: 'JetBrains Mono Bold';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
